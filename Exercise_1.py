@@ -1,10 +1,14 @@
-def create_greeting(name, surname):
-    greeting = f"Cześć {name} {surname}!"
-    return greeting
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
 
-input_name = "Mariusz"
-input_surname = "Pudzianowski"
+    def is_passed(self):
+        average_marks = sum(self.marks) / len(self.marks)
+        return average_marks > 50
 
-result = create_greeting(input_name, input_surname)
+student1 = Student("Katarzyna Lubnauer", [60, 70, 80])
+student2 = Student("Tomasz Ćwiąkała", [40, 30, 20])
 
-print(result)
+print(student1.is_passed())  
+print(student2.is_passed()) 

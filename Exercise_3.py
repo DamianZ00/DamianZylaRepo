@@ -1,10 +1,31 @@
-def is_even_number(number):
-    return number % 2 == 0
+class Property:
+    def __init__(self, area, rooms, price, address):
+        self.area = area
+        self.rooms = rooms
+        self.price = price
+        self.address = address
 
-input_number = 8
-result = is_even_number(input_number)
+    def __str__(self):
+        return f"Property: {self.area} sq. meters, {self.rooms} rooms, ${self.price}, Address: {self.address}"
 
-if result:
-    print("Liczba parzysta")
-else:
-    print("Liczba nieparzysta")
+class House(Property):
+    def __init__(self, area, rooms, price, address, plot):
+        super().__init__(area, rooms, price, address)
+        self.plot = plot
+
+    def __str__(self):
+        return f"House: {super().__str__()}, Plot: {self.plot} sq. meters"
+
+class Flat(Property):
+    def __init__(self, area, rooms, price, address, floor):
+        super().__init__(area, rooms, price, address)
+        self.floor = floor
+
+    def __str__(self):
+        return f"Flat: {super().__str__()}, Floor: {self.floor}"
+
+house1 = House(200, 5, 500000, "123 Main St", 500)
+flat1 = Flat(80, 3, 200000, "456 Oak St", 2)
+
+print(house1)
+print(flat1)
