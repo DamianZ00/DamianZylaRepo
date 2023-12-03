@@ -2,6 +2,7 @@ def multiply_numbers(a, b):
     result = a * b
     return result
 
+
 number1 = 5
 number2 = 7
 

@@ -1,6 +1,7 @@
 def check_value_in_list(lst, value):
     return value in lst
 
+
 my_list = [1, 3, 5, 7, 9]
 
 my_value = 5

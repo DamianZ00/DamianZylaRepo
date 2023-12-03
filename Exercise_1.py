@@ -2,6 +2,7 @@ def create_greeting(name, surname):
     greeting = f"Cześć {name} {surname}!"
     return greeting
 
+
 input_name = "Mariusz"
 input_surname = "Pudzianowski"
 
