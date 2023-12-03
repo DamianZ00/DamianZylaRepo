@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-to jest plik testowyxxx
-=======
->>>>>>> test_2
-
-xd
