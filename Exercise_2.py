@@ -7,10 +7,13 @@ class Library:
         self.phone = phone
 
     def __str__(self):
-        return f"Library: {self.city}, {self.street}, {self.zip_code}, {self.open_hours}, {self.phone}"
+        return f"Library: {self.city}, {self.street}, {self.zip_code},
+        {self.open_hours}, {self.phone}"
+
 
 class Employee:
-    def __init__(self, first_name, last_name, hire_date, birth_date, city, street, zip_code, phone):
+    def __init__(self, first_name, last_name, hire_date, birth_date,
+                 city, street, zip_code, phone):
         self.first_name = first_name
         self.last_name = last_name
         self.hire_date = hire_date
@@ -21,10 +24,14 @@ class Employee:
         self.phone = phone
 
     def __str__(self):
-        return f"Employee: {self.first_name} {self.last_name}, {self.hire_date}, {self.birth_date}, {self.city}, {self.street}, {self.zip_code}, {self.phone}"
+        return f"Employee: {self.first_name} {self.last_name},
+        {self.hire_date}, {self.birth_date}, {self.city},
+        {self.street}, {self.zip_code}, {self.phone}"
+
 
 class Book:
-    def __init__(self, library, publication_date, author_name, author_surname, number_of_pages):
+    def __init__(self, library, publication_date, author_name,
+                 author_surname, number_of_pages):
         self.library = library
         self.publication_date = publication_date
         self.author_name = author_name
@@ -32,7 +39,10 @@ class Book:
         self.number_of_pages = number_of_pages
 
     def __str__(self):
-        return f"Book: {self.author_name} {self.author_surname}, {self.publication_date}, {self.number_of_pages}, {str(self.library)}"
+        return f"Book: {self.author_name} {self.author_surname},
+        {self.publication_date}, {self.number_of_pages},
+        {str(self.library)}"
+
 
 class Order:
     def __init__(self, employee, student, books, order_date):
@@ -43,13 +53,21 @@ class Order:
 
     def __str__(self):
         books_info = "\n".join([str(book) for book in self.books])
-        return f"Order: {str(self.employee)}, {str(self.student)}, Books:\n{books_info}, {self.order_date}"
+        return f"Order: {str(self.employee)}, {str(self.student)},
+        Books: \n{books_info}, {self.order_date}"
 
-library1 = Library("Katowice", "ul. Sandomierska 15", "40-216", "9:00 - 17:00", "123-456-789")
-library2 = Library("Wadowice", "ul. Zamkowa 16", "22-222", "10:00 - 18:00", "987-654-321")
 
-employee1 = Employee("Adam", "Małysz", "2022-01-01", "1990-05-15", "Katowice", "ul. Katowicka", "40-215", "111-222-333")
-employee2 = Employee("Kamil", "Stoch", "2022-02-01", "1985-08-20", "Zakopane", "ul. Adama Małsza 39", "66-212", "444-555-666")
+library1 = Library("Katowice", "ul. Sandomierska 15", "40-216",
+                   "9:00 - 17:00", "123-456-789")
+library2 = Library("Wadowice", "ul. Zamkowa 16", "22-222",
+                   "10:00 - 18:00", "987-654-321")
+
+employee1 = Employee("Adam", "Małysz", "2022-01-01", "1990-05-15",
+                     "Katowice", "ul. Katowicka",
+                     "40-215", "111-222-333")
+employee2 = Employee("Kamil", "Stoch", "2022-02-01", "1985-08-20",
+                     "Zakopane", "ul. Adama Małsza 39",
+                     "66-212", "444-555-666")
 
 book1 = Book(library1, "1599-01-01", "William", "Shakespeare", 200)
 book2 = Book(library1, "1603-02-02", "William", "Shakespeare", 250)
